@@ -1,14 +1,13 @@
 <!--
  * @Author: 吴俊杰 20717@etransfar.com
  * @Date: 1985-10-26 16:15:00
- * @LastEditors: 吴俊杰 20717@etransfar.com
- * @LastEditTime: 2022-09-06 15:33:46
+ * @LastEditors: 吴俊杰 20717@etransfar.com·
+ * @LastEditTime: 2022-09-15 14:27:51
  * @FilePath: /个人工作/tf-next-app/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <div align="center">多标签页后台管理模板</div>
 
-<div align="center">
 基于next框架开发，此版mobx版本Antd多页签，流程简单，开发效率更高。
 
 <br />
