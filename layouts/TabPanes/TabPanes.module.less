@@ -1,0 +1,24 @@
+.tabs {
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.12);
+  height: 100%;
+  overflow-y: auto;
+}
+
+.tabsBox{
+  flex:auto;
+  overflow: hidden;
+  :global{
+    .ant-tabs-content-holder,.ant-tabs-tabpane{
+      display: flex;
+      flex: auto;
+      &.ant-tabs-tabpane-hidden{
+        display: none;
+      }
+    }
+    .ant-tabs > .ant-tabs-nav, .ant-tabs > div > .ant-tabs-nav{
+      margin: 0;
+    }
+  }
+}
