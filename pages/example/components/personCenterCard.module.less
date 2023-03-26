@@ -1,0 +1,125 @@
+.personCenterCard-box {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../assets/main/bg/登录背景.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  :global {
+    .header-img {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      padding-left: 10px;
+      // justify-content: center;
+      // flex-direction: column;
+      img {
+        width: 74px;
+        height: 79px;
+        // margin-bottom: 20px;
+      }
+      span {
+        font-size: 14px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #9ba0aa;
+        line-height: 14px;
+        // text-shadow: 0px 3px 5px rgba(14, 29, 65, 0.1);
+      }
+    }
+    .login-action {
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+      .login-btn {
+        cursor: pointer;
+        color: #444;
+        // width: 115px;
+        // height: 32px;
+      }
+    }
+    .personCenterCard-header {
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 10px 10px 0 10px;
+      .personCenterCard-header-img {
+        width: 74px;
+        height: 79px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 100%;
+        }
+      }
+      .personCenterCard-info-outer {
+        margin-left: 10px;
+        .info-welcome {
+          font-size: 14px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #9ba0aa;
+          line-height: 14px;
+          // text-shadow: 0px 3px 5px rgba(14, 29, 65, 0.1);
+        }
+        .info-time {
+          font-size: 12px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #b9bec3;
+          line-height: 12px;
+          // text-shadow: 0px 3px 5px rgba(14, 29, 65, 0.1);
+          margin-top: 7px;
+        }
+      }
+    }
+    .personCenterCard-list {
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      .list-item {
+        flex-basis: 33.3%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        cursor: pointer;
+        .list-item-number,
+        .list-item-text {
+          width: 46px;
+          height: 20px;
+        }
+        .list-item-number {
+          font-size: 18px;
+          font-family: PingFang-SC-Medium, PingFang-SC;
+          font-weight: 500;
+          color: #1e283c;
+          line-height: 24px;
+          // text-shadow: 0px 3px 5px rgba(14, 29, 65, 0.1), 0px 1px 0px rgba(255, 255, 255, 0.5);
+        }
+        .list-item-text {
+          font-size: 14px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #9ba0aa;
+          line-height: 14px;
+          // text-shadow: 0px 3px 5px rgba(14, 29, 65, 0.1), 0px 1px 0px #ffffff;
+          margin-top: 10px;
+        }
+        .item-line {
+          position: absolute;
+          top: 16px;
+          right: 0;
+          height: 40px;
+          box-shadow: 0px 3px 5px 0px rgba(14, 29, 65, 0.1);
+          border-right: 1px solid #e4e7ef;
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,8 @@
 /*
  * @Author: 吴俊杰 20717@etransfar.com
  * @Date: 2022-09-05 14:30:21
- * @LastEditors: 吴俊杰 20717@etransfar.com
- * @LastEditTime: 2022-09-06 14:38:07
+ * @LastEditors: 吴俊杰_20717 20717@etransfar.com
+ * @LastEditTime: 2023-02-15 13:51:10
  * @FilePath: /个人工作/tf-next-app/layouts/MainHeader/index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -11,8 +11,8 @@ import { Layout, Dropdown, Menu, Row, Col } from 'antd';
 import { SmileOutlined, LogoutOutlined, MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 import { Link } from 'next/router';
 import { observer } from 'mobx-react';
-
 import { appStores } from '@/stores';
+import AvatarDropDown from '@/components/AvatarDropDown';
 import style from './style.module.less';
 
 const menu = (
@@ -40,12 +40,13 @@ const MainHeader = () => {
           </span>
         </Col>
         <Col>
-          <Dropdown overlay={menu} trigger={['click', 'hover']} placement="bottomCenter">
+          <AvatarDropDown />
+          {/* <Dropdown overlay={menu} trigger={['click', 'hover']} placement="bottomCenter">
             <div className="user-info">
               <span className="user-img" />
               <span className="user-name">{globalStore.userInfo.loginName}</span>
             </div>
-          </Dropdown>
+          </Dropdown> */}
         </Col>
       </Row>
     </Layout.Header>

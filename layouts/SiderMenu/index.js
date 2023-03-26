@@ -2,8 +2,8 @@
  * @Description:
  * @Author: wjunj
  * @Date: 2020-12-09 18:36:39
- * @LastEditors: 吴俊杰 20717@etransfar.com
- * @LastEditTime: 2022-09-06 10:00:08
+ * @LastEditors: 吴俊杰_20717 20717@etransfar.com
+ * @LastEditTime: 2023-02-15 11:19:54
  * @FilePath: /react-web-pro/src/layouts/SiderMenu/index.js
  */
 import React, { useState, useEffect, useCallback,useMemo } from 'react';
@@ -11,7 +11,7 @@ import React, { useState, useEffect, useCallback,useMemo } from 'react';
 import {useRouter, Link} from 'next/router'
 import { observer } from 'mobx-react';
 import { Layout, Menu, Row } from 'antd';
-import { RocketTwoTone } from '@ant-design/icons';
+import { RocketTwoTone,DashboardOutlined } from '@ant-design/icons';
 import { getKeyName, flattenRoutes } from '@/utils/publicFunc'
 import { appStores } from '@/stores';
 import style from './style.module.less';

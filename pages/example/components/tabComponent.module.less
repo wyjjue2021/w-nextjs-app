@@ -1,0 +1,125 @@
+.tab-component {
+  overflow: hidden;
+  :global {
+    .title-img-outer {
+      margin-top: 16px;
+      height: 25px;
+    }
+    .tab-key {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #dddee1;
+      height: 50px;
+      .tab-key-left {
+        display: flex;
+        margin-top: 5px;
+        .tab-key-item {
+          display: flex;
+          align-items: center;
+          padding: 0 10px;
+          margin: 0 10px;
+          margin-top: 5px;
+          font-size: 16px;
+          font-family: PingFang-SC-Regular, PingFang-SC;
+          font-weight: 400;
+          color: #4b5564;
+          cursor: pointer;
+          position: relative;
+          margin-left: 40px;
+          .tab-touch {
+            position: absolute;
+            bottom: -12px;
+            width: 100px;
+          }
+          .tab-touch.tab-line-touch {
+            left: -25px;
+            bottom: -20px;
+          }
+          .tab-touch.tab-car-touch {
+            left: -25px;
+            bottom: -20px;
+          }
+          .tab-touch.tab-company-touch {
+            left: -15px;
+            bottom: -20px;
+          }
+        }
+        .tab-key-item-actived {
+          font-size: 28px;
+          font-family: YouSheBiaoTiHei;
+          color: #1e283c;
+        }
+      }
+      .tab-key-right {
+      }
+    }
+    .tab-table {
+      .table-outer {
+        .table-head {
+          box-sizing: border-box;
+          padding: 0 30px;
+          .ant-col {
+            margin: 14px 0;
+            font-size: 16px;
+            font-family: PingFang-SC-Medium, PingFang-SC;
+            font-weight: 500;
+            color: #1e283c;
+          }
+        }
+        .table-body {
+          // background: rgba(255, 255, 255, 0.3);
+          // box-shadow: 0px 3px 5px 0px rgba(14, 29, 65, 0.15);
+          // border-radius: 16px;
+          // border: 1px solid #ffffff;
+          font-size: 14px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #4b5564;
+          box-sizing: border-box;
+          padding: 0 30px;
+          min-height: 414px;
+          .ant-col {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            // margin: 8px 0;
+            // display: flex;
+            // align-items: center;
+            line-height: 46px;
+            height: 46px;
+            font-size: 13px;
+            .icon-star {
+              margin: 0 3px;
+              width: 16px;
+            }
+          }
+        }
+      }
+    }
+    .line-item {
+      color: #2b82d8;
+      display: flex;
+      align-items: center;
+      .time-box {
+        border: 1px solid #2b82d8;
+        background-color: rgba(43, 130, 216, 0.1);
+        padding: 0 3px;
+        border-radius: 3px;
+        font-size: 10px;
+        line-height: 20px;
+      }
+      .line {
+        display: inline-block;
+        width: 16px;
+        border-top: 1px solid #abbbeb;
+      }
+      .line:nth-child(1) {
+        margin-left: 4px;
+      }
+      .line:nth-last-child(1) {
+        margin-right: 4px;
+      }
+    }
+  }
+}

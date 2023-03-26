@@ -10,7 +10,7 @@ import React, {
 import {useRouter, Link,withRouter} from 'next/router'
 
 import { Tabs, Alert, Dropdown, Menu } from 'antd'
-import Welcome from '@/pages/welcome'
+import Welcome from '@/pages/index'
 import { getKeyName, isAuthorized } from '@/utils/publicFunc'
 import LoadingPage from '@/components/LoadingPage'
 import { indexRouteKey } from '../../utils'
@@ -44,7 +44,9 @@ const TabPanes = (props) => {
       query:search,
       push,
       asPath
-    }
+    },
+    component:Component,
+    pageProps
   } = props
 
   const [activeKey, setActiveKey] = useState('')
@@ -178,7 +180,7 @@ const TabPanes = (props) => {
     ]
 
     const nowPanes =
-      key !== '/welcome' && !isCloseAll ? [...homePanel, selectedPanel] : homePanel
+      key !== indexRouteKey && !isCloseAll ? [...homePanel, selectedPanel] : homePanel
     setPanes(nowPanes)
     setActiveKey(isCloseAll ? indexRouteKey : key)
     storeTabs(nowPanes)
@@ -264,7 +266,7 @@ const TabPanes = (props) => {
     e.preventDefault()
     setSelectedPanel(panel)
   }
-  
+
   return (
     <div className={style.tabsBox}>
       <Tabs
@@ -278,7 +280,7 @@ const TabPanes = (props) => {
         onTabClick={onTabClick}
         type="editable-card"
       >
-        {panes.map((pane) => {
+        {(panes || []).map((pane) => {
           return <TabPane
             closable={pane.closable}
             key={pane.key}
@@ -299,7 +301,7 @@ const TabPanes = (props) => {
               </Dropdown>
             }
           >
-            <Suspense fallback={<LoadingPage />}>
+            {/* <Suspense fallback={<LoadingPage />}>
               {reloadPath !== pane.path ? (
                 <pane.content path={pane.path} />
               ) : (
@@ -307,11 +309,23 @@ const TabPanes = (props) => {
                   <Alert message="刷新中..." type="info" />
                 </div>
               )}
-            </Suspense>
+            </Suspense> */}
           </TabPane>
           }
         )}
       </Tabs>
+      <div className='tabs-component'>
+          <Suspense fallback={<LoadingPage />}>
+              {reloadPath !== pathname ? (
+                <Component pageProps={pageProps}></Component>
+              ) : (
+                <div style={{ height: '100vh' }}>
+                  <Alert message="刷新中..." type="info" />
+                </div>
+              )}
+            </Suspense>
+       
+      </div>
     </div>
   )
 }

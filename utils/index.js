@@ -2,7 +2,7 @@
  * @Author: wjunj
  * @Date: 2019-08-14 16:14:30
  */
-export const indexRouteKey = 'welcome'
+export const indexRouteKey = '/'
 const isDev = process.env.NODE_ENV === 'development'; // 开发 or 生产
 
 // 匹配接口前缀
@@ -10,7 +10,7 @@ export function autoMatch(prefix) {
   let baseUrl = '';
   if (isDev) {
     // 开发环境 通过proxy配置转发请求；
-    baseUrl = `/${prefix || 'scmOpAdmin'}`;
+    baseUrl = `/${prefix || ''}`;
   } else {
     // 生产环境 根据实际配置 根据 prefix 匹配url;
     // 配置来源 根据实际应用场景更改配置。(1.从全局读取；2.线上配置中心读取)

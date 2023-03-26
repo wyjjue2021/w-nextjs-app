@@ -2,13 +2,17 @@
   padding: 0;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.12);
-  height: 100%;
-  overflow-y: auto;
+  // height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex: 0 0 35px;
 }
 
 .tabsBox{
-  flex:auto;
+  flex:1;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   :global{
     .ant-tabs-content-holder,.ant-tabs-tabpane{
       display: flex;
@@ -19,6 +23,11 @@
     }
     .ant-tabs > .ant-tabs-nav, .ant-tabs > div > .ant-tabs-nav{
       margin: 0;
+    }
+    .tabs-component{
+      background: #fff;
+      flex: 1;
+      overflow: auto;
     }
   }
 }

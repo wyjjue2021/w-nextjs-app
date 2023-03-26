@@ -1,3 +1,11 @@
+/*
+ * @Author: 吴俊杰_20717 20717@etransfar.com
+ * @Date: 2022-09-05 16:57:11
+ * @LastEditors: 吴俊杰_20717 20717@etransfar.com
+ * @LastEditTime: 2023-03-16 15:14:46
+ * @FilePath: /tf-next-app/routers/config.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import React, { lazy } from 'react';
 import {
   HomeOutlined,
@@ -14,22 +22,24 @@ import {
 // import BlankLayout from '@/layouts/BlankLayout';
 
 
-export const pageRoute = {
-  path: '/',
-  // exact: true,
-  // component: , // 基本布局
-  childRoutes: [
+export const pageRoute =  [
     {
-      path: '/welcome',
+      path: '/',
       name: '首页',
       icon: <SmileOutlined />,
-      component: lazy(() => import('@/pages/welcome')),
+      component: lazy(() => import('@/pages/index')),
     },
+    // {
+    //   path: '/home',
+    //   name: 'home主页',
+    //   icon: <HomeOutlined />,
+    //   component: lazy(() => import('@/pages/home')),
+    // },
     {
-      path: '/home',
-      name: 'home主页',
+      path: '/example',
+      name: '示例页',
       icon: <HomeOutlined />,
-      component: lazy(() => import('@/pages/home')),
+      component: lazy(() => import('@/pages/example')),
     },
     // {
     //   path: '/list',
@@ -88,25 +98,9 @@ export const pageRoute = {
         },
       ],
     },
-    { path: '/', exact: true, redirect: '/welcome' },
     { path: '*', exact: true, redirect: '/exception/404' },
-  ],
-}
-
-export const loginRoute = {
-  path: '/',
-  // exact: true,
-  // component: BlankLayout, // 基本布局
-  childRoutes: [
-    {
-      path: '/login',
-      name: '登录',
-      // component: lazy(() => import('@/pages/Login')),
-    }
   ]
-}
 
 export default [
-  loginRoute,
   pageRoute
 ]

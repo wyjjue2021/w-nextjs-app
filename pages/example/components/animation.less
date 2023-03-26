@@ -1,0 +1,12 @@
+/*
+  @name: 规定需要绑定到选择器的 keyframe 名称
+  @duration:规定完成动画所花费的时间，以秒或毫秒计
+  @function:规定动画的速度曲线
+  @count规定动画应该播放的次数   infinite表示无限次数
+*/
+.animation(@name:name,@duration:2s,@function:linear,@count:infinite) {
+  animation: @name @duration @function @count;
+  -webkit-animation: @name @duration @function @count;
+  -o-animation: @name @duration @function @count;
+  -moz-animation: @name @duration @function @count;
+}

@@ -1,0 +1,110 @@
+.specialOffer-box {
+  width: 100%;
+  height: 100%;
+  padding: 20px 30px;
+  .tit {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+  .content {
+    padding-top: 20px;
+    box-sizing: border-box;
+    .listBox {
+      position: relative;
+      padding: 10px 24px 5px 24px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      .main {
+        display: flex;
+        padding-bottom: 10px;
+        .mainLeftImg {
+          position: relative;
+          width: 92px;
+          height: 92px;
+          margin-right: 17px;
+          border-radius: 2px;
+          .timer {
+            position: absolute;
+            bottom: -4px;
+            left: 6px;
+            opacity: 0.85;
+            background-image: linear-gradient(180deg, #ff984b 0%, #fd5424 99%);
+            border-radius: 0 0 2px 2px;
+            color: #fff;
+            font-size: 12px;
+            width: 92px;
+            text-align: center;
+          }
+        }
+        .mainRight {
+          width: 100%;
+          .startend {
+            font-size: 16px;
+            color: #1e283c;
+            font-weight: bold;
+            img {
+              margin: 0 10px;
+            }
+          }
+          .company {
+            font-size: 14px;
+            color: #6e7382;
+          }
+          .info {
+            background: #f3f6f9;
+            border-radius: 4px;
+            padding: 10px;
+            margin-top: 5px;
+            .left {
+              float: left;
+              p {
+                margin-bottom: 5px;
+              }
+            }
+            .right {
+              float: right;
+              .queIcon {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+                margin-bottom: 7px;
+              }
+            }
+            .bold {
+              font-size: 14px;
+              color: #1e283c;
+              font-weight: bold;
+            }
+            .orange {
+              font-family: 'FinFont-Bold';
+              font-size: 20px;
+              font-weight: bold;
+              color: #fe3824;
+              padding-right: 5px;
+            }
+            .address {
+              font-size: 14px;
+              color: #6e7382;
+            }
+            .gray {
+              font-family: 'FinFont-Bold';
+              font-size: 16px;
+              color: #9ba0aa;
+              text-decoration: line-through;
+              padding: 0 10px;
+            }
+          }
+          .info::before,
+          .info::after {
+            content: '';
+            display: table;
+            clear: both;
+          }
+        }
+      }
+    }
+    .listBox:first-child .main {
+      border-bottom: 1px dashed #e4e7ef;
+    }
+  }
+}

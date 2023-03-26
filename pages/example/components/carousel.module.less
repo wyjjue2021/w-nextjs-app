@@ -1,0 +1,36 @@
+.carousel-outer {
+  width: 100%;
+  height: 100%;
+  :global {
+    .ant-carousel {
+      width: 100%;
+      height: 100%;
+      .slick-dots {
+        margin-bottom: 10px;
+        .slick-active {
+          button {
+            width: 18px !important;
+            height: 7px !important;
+            border-radius: 7px !important;
+            overflow: hidden;
+            background-color: #308fff;
+          }
+        }
+        button {
+          width: 7px !important;
+          height: 7px !important;
+          border-radius: 7px !important;
+          overflow: hidden;
+          margin: 0 3px;
+          background-color: rgba(0, 0, 0, 0.6);
+        }
+      }
+      .slick-slide {
+        img {
+          height: 261px;
+          width: 559px;
+        }
+      }
+    }
+  }
+}

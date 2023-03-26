@@ -54,7 +54,7 @@ export const getKeyName = (_path = '') => {
     return { title: '暂无权限', tabKey: '404', component: Page404 }
   }
   const { name, path, component } = curRoute[0]
-  return { title: name, tabKey: path.replace(/^\//, ''), component }
+  return { title: name, tabKey: path.replace(/^\//, '') || '/', component }
 }
 
 /**

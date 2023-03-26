@@ -1,0 +1,16 @@
+@keyframes tipmove {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes tipmove{ /* Safari and Chrome */
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
